@@ -1,0 +1,44 @@
+#1.
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+#2.
+#<Files database.php,validatelogin.php,validatechangepw.php,validatelock.php>
+#order deny,allow
+#deny from all
+#</Files>
+
+#3.
+#<FilesMatch ^((home|test|guy)$|home)$>
+#order deny,allow
+#deny from all
+#</FilesMatch>
+
+#4.
+# Disable Directory Browsing
+#Options All -Indexes
+#
+#errorDocument 400 http://localhost:81/foshwa.my/error/error
+#errorDocument 401 http://localhost:81/foshwa.my/error/error
+#errorDocument 403 http://localhost:81/foshwa.my/error/error
+#errorDocument 500 http://localhost:81/foshwa.my/error/error
+
+
+#RewriteEngine On
+#RewriteCond %{HTTP_HOST} ^youwebsite.com
+#RewriteRule (.*) http://www.youwebsite.info/$1 [R=301,L]
+#
+#RewriteCond %{HTTP_HOST} ^subdomain\.youwebsite\.com$
+#RewriteCond %{REQUEST_URI} !^/subdomain_folder/
+#RewriteRule (.*) /subdomain_folder/$1
+#
+#RewriteCond %{HTTP_HOST} ^oldwebsite.com
+#RewriteRule (.*) http://www.newwebsite.com/$1 [R=301,L]
+#
+#RewriteCond %{HTTP_HOST} ^www\.oldwebsite\.com
+#RewriteRule (.*) http://www.newwebsite.com/$1 [R=301,L]
+
+#Alternate default index pages
+DirectoryIndex index.php
+

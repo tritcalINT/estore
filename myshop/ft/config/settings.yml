@@ -1,0 +1,31 @@
+plugins:
+  formattingtlb_ui:
+    default: true
+    client: true
+  formattingtlb_underline:
+    default: true
+    client: true
+  formattingtlb_addimg:
+    default: true
+    client: true
+  formattingtlb_floatl:
+    default: true
+    client: true
+  formattingtlb_left:
+    default: true
+    client: true
+  formattingtlb_center:
+    default: true
+    client: true
+  formattingtlb_right:
+    default: true
+    client: true
+  formattingtlb_justify:
+    default: true
+    client: true
+  formattingtlb_color:
+    default: true
+    client: true
+  formattingtlb_size:
+    default: false
+    client: true

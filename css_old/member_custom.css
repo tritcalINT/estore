@@ -1,0 +1,156 @@
+#error_display {
+    color: #F00;
+    padding: 10px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#success_display {
+    color: #65BA3B;
+    padding: 10px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.box-title{
+	color: #FFF;
+}
+
+thead{
+	background: #1A2226;
+}
+
+label{
+	color: #949ba2;
+}
+
+input[type=file]{
+	color: #949ba2;
+}
+
+.light-grey-color{
+	color: #949ba2;
+}
+
+.white-color{
+	color: #FFF;
+}
+
+.table-striped>tbody>tr:nth-of-type(even){
+	background-color: #24262D;
+    color: #949ba2;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd){
+	background-color: #393C44;
+    color: #949ba2;
+}
+
+.referal-accordian{
+	background-color: #1A2226;
+	border-color: #949ba2;
+}
+
+.referal-accordian a{
+	color: #FFF;
+}
+
+.referal-title{
+	font-weight: bold;
+}
+
+.page_heading{
+	color: #FFF;
+}
+
+.upload_picture{
+	margin-top: 15px;
+}
+
+.user_image{
+	text-align: left;
+}
+
+.profile_image{
+	width: 150px;
+	height: 150px;
+}
+
+.display_info{
+	color: #FFF;
+	font-size: large;
+}
+
+.readonly_fields{
+	margin-bottom: 15px;
+}
+
+.table-condensed thead{
+	background: none;
+}
+
+.package-info{
+	height: 130px;
+}
+
+.package-details-section{
+	width: 75%;
+	float: left;
+}
+
+.rewards-section{
+	padding: 0px;
+	width: 25%;
+	float: left;
+}
+
+.rewards-offer {
+    font-size: x-large;
+    background: #000;
+    padding-left: 11px;
+    padding-right: 5px;
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    padding-top: 22px;
+}
+
+.rewards-info{
+	font-size: medium;
+	margin-left: 10px;
+    position: relative;
+    bottom: 10px;
+}
+
+.white-heading{
+	color: #FFF;
+	padding-bottom: 20px;
+}
+
+#deposit_details, #withdraw_rate{
+	color: #FFF;
+	font-weight: bold;
+}
+
+.content-header > .breadcrumb > li > a, .breadcrumb>.active, .text-white{
+	color: #FFF;
+}
+
+.text-italic {
+	font-style: italic;
+}
+
+.half-table{
+	width: 50%;
+}
+
+.latest-news{
+	max-height: 696px;
+    overflow-y: scroll;
+}
+
+.news-details{
+	width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}

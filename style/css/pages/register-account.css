@@ -1,0 +1,132 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 14/07/2019, 3:46:58 AM
+    Author     : Amila
+*/
+
+
+ 
+  
+*, *:before, *:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	color: #ffc229;
+	display: flex;
+	padding: 20px;
+	min-height: 100vh;
+	position: relative;
+	flex-direction: column;
+	justify-content: center;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	background-color: transparent;
+	 
+}
+
+.boxA {
+	width: 100%;
+	margin: auto;
+	padding: 10px;
+	max-width: 700px;
+	border-radius: 2px;
+	
+	background-color: rgba(0,0,0,0.2);
+}
+
+h1 {
+	font-weight: 100;
+	letter-spacing: 1px;
+	margin: 10px 0 20px 10px;
+        color: white;
+}
+
+.input-group {
+	font-size: 18px;
+        color: white;
+	padding: 5px 10px;
+	padding-top: 30px;
+	position: relative;
+	border-radius: 2px;
+	margin-bottom: 10px;
+	 
+	background-color: rgba(0,0,0,0.1);
+	
+	input {
+		width: 100%;
+		border: none;
+		outline: none;
+		display: block;
+		font-weight: 300;
+              
+		letter-spacing: 1px;
+		background-color: transparent;
+		
+		&:focus,
+		&.active {
+			+ label {
+				top: 5px;
+				left: 5px;
+				font-size: 14px;
+			}
+		}
+	}
+        
+        option {
+		width: 100%;
+		border: none;
+		outline: none;
+		display: block;
+		font-weight: 300;
+		letter-spacing: 1px;
+		background-color: transparent;
+		
+		&:focus,
+		&.active {
+			+ label {
+				top: 5px;
+				left: 5px;
+				font-size: 14px;
+			}
+		}
+	}
+	
+	label {
+		top: 30px;
+		left: 10px;
+		opacity: 0.7;
+		font-weight: 100;
+                color: black;
+		position: absolute;
+		letter-spacing: 2px;
+		pointer-events: none;
+		transition: all 0.2s ease-in;
+	}
+}
+
+input[type="submit"] {
+	border: none;
+	float: right;
+	outline: none;
+	padding: 10px;
+	font-weight: 300;
+	border-radius: 2px;
+	letter-spacing: 1px;
+	 
+	text-transform: uppercase;
+	background-color: rgba(255,255,255,0.2);
+	transition: all 0.2s ease-in;
+	
+	&:hover,
+	&:focus {
+		 
+	}
+}
+ 
+

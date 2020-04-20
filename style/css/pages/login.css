@@ -1,0 +1,155 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11/07/2019, 7:35:29 AM
+    Author     : Amila
+*/
+ 
+  
+*, *:before, *:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	color: white;
+	display: flex;
+	padding: 20px;
+	min-height: 100vh;
+	position: relative;
+	flex-direction: column;
+	justify-content: center;
+	
+	background-color: transparent;
+	 
+}
+
+.boxA {
+	width: auto;
+	margin: auto;
+        
+        padding: 10px;
+	 
+	max-width: 400px;
+	border-radius: 2px;	 
+	background-color: rgba(0,0,0,0.2);
+}
+
+
+
+.input-group {
+	
+
+	 
+	background-color: rgba(0,0,0,0.1);
+	
+	input {
+		width: 100%;
+		border: none;
+		outline: none;
+		display: block;
+		font-weight: 300;
+		letter-spacing: 1px;
+		background-color: transparent;
+		
+		&:focus,
+		&.active {
+			+ label {
+				top: 5px;
+				left: 5px;
+				font-size: 16px;
+			}
+		}
+	}
+	
+	label {
+		top: 30px;
+		left: 10px;
+		opacity: 0.7;
+		font-weight: 100;
+		position: absolute;
+		letter-spacing: 2px;
+		pointer-events: none;
+		transition: all 0.2s ease-in;
+	}
+}
+
+input[type="submit"] {
+	border: none;
+	float: right;
+	outline: none;
+	padding: 10px;
+	font-weight: 300;
+	border-radius: 2px;
+	letter-spacing: 1px;
+	 
+	text-transform: uppercase;
+	background-color: rgba(255,255,255,0.2);
+	transition: all 0.2s ease-in;
+	
+	&:hover,
+	&:focus {
+		 
+	}
+}
+        
+input[type="button"] {
+	border: none;
+	float: right;
+	outline: none;
+	padding: 10px;
+	font-weight: 300;
+	border-radius: 2px;
+	letter-spacing: 1px;
+	 
+	text-transform: uppercase;
+	background-color: rgba(255,255,255,0.2);
+	transition: all 0.2s ease-in;
+	
+	&:hover,
+	&:focus {
+		 
+	}
+        
+ .form-inline {  
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.form-inline label {
+  margin: 5px 10px 5px 0;
+}
+
+.form-inline input {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.form-inline button {
+  padding: 10px 20px;
+  background-color: dodgerblue;
+  border: 1px solid #ddd;
+  color: white;
+  cursor: pointer;
+}
+
+.form-inline button:hover {
+  background-color: royalblue;
+}       
+
+.form-inline {  
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+}
+ 

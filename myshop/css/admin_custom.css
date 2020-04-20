@@ -1,0 +1,122 @@
+#error_display {
+    color: #F00;
+    padding: 10px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#success_display {
+    color: #65BA3B;
+    padding: 10px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.main_update_button{
+	padding: 20px 50px;
+}
+
+.display_update_button{
+	margin-top: 24px;
+}
+
+thead{
+	background: #1A2226;
+}
+
+label{
+	color: #949ba2;
+}
+
+.light-grey-color{
+	color: #949ba2;
+}
+
+.white-color{
+	color: #FFF;
+}
+
+.table-striped>tbody>tr:nth-of-type(even){
+	background-color: #24262D;
+    color: #949ba2;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd){
+	background-color: #393C44;
+    color: #949ba2;
+}
+
+.table-condensed thead{
+	background: none;
+}
+
+input[type=file]{
+	color: #949ba2;
+}
+
+.current_trading_board{
+	padding: 10px;
+}
+
+.referal-accordian{
+	background-color: #1A2226;
+	border-color: #949ba2;
+}
+
+.referal-accordian a{
+	color: #FFF;
+}
+
+.referal-title{
+	font-weight: bold;
+}
+
+.package-info{
+	height: 130px;
+}
+
+.package-details-section{
+	width: 75%;
+	float: left;
+}
+
+.rewards-section{
+	padding: 0px;
+	width: 25%;
+	float: left;
+}
+
+.rewards-offer {
+    font-size: x-large;
+    background: #000;
+    padding-left: 11px;
+    padding-right: 5px;
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    padding-top: 22px;
+}
+
+.rewards-info{
+	font-size: medium;
+	margin-left: 10px;
+    position: relative;
+    bottom: 10px;
+}
+
+.text-white{
+	color: #FFF;
+	font-weight: normal;
+}
+
+.trading-search{
+	height: 55px;
+}
+
+.content-header > .breadcrumb > li > a, .breadcrumb>.active, .text-white{
+	color: #FFF;
+}
+
+.half-table{
+	width: 50%;
+}
