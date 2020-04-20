@@ -1,5 +1,6 @@
 
 <?php
+//changed Text
 include_once 'header.php';
 
 if (isset($_GET['error'])) {
