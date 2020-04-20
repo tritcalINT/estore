@@ -1,0 +1,4 @@
+[24-May-2019 12:04:03 UTC] PHP Notice:  Undefined index: master in /home2/vcsucom94/public_html/vshopper/admin/session.php on line 4
+[24-May-2019 12:04:03 UTC] PHP Notice:  Undefined index: admin in /home2/vcsucom94/public_html/vshopper/admin/session.php on line 4
+[24-May-2019 12:04:03 UTC] PHP Notice:  Undefined index: reseller in /home2/vcsucom94/public_html/vshopper/admin/session.php on line 4
+[24-May-2019 12:04:03 UTC] PHP Notice:  Undefined index: supermaster in /home2/vcsucom94/public_html/vshopper/admin/session.php on line 4

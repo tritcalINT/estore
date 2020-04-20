@@ -1,0 +1,12 @@
+en:
+  site_settings:
+    formattingtlb_ui: 'Activate the formatting toolbar?'
+    formattingtlb_underline: 'Activate the underline button'
+    formattingtlb_addimg: 'Activate the image button'
+    formattingtlb_floatl: 'Activate the float left button'
+    formattingtlb_left: 'Activate the align left button'
+    formattingtlb_center: 'Activate the center button'
+    formattingtlb_right: 'Activate the align right button'
+    formattingtlb_justify: 'Activate the justify button'
+    formattingtlb_color: 'Activate the color button'
+    formattingtlb_size: 'Activate the size button'

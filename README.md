@@ -1,2 +1,0 @@
-# estore
- Ecommerce-Platform 
