@@ -41,17 +41,17 @@ if (isset($_GET['error'])) {
                                 <dt class="first"><?= $lang['Category'] ?></dt>
                                 <dd>
                                     <ol>
-                                        <li><a href="grid.php?cat=apple">Apples & pears</a></li>
-                                        <li><a href="grid.php?cat=stone">Stone fruit</a></li>
-                                        <li><a href="grid.php?cat=melon">Melons</a></li>
-                                        <li><a href="grid.php?cat=berry">Berries</a></li>
-                                        <li><a href="grid.php?cat=exotic">Tropical & exotic</a></li>
-                                        <li><a href="grid.php?cat=vege">Fresh Vegetables</a></li>
+                                        <?php
+                                        $cat_result = mysqli_query($conn, "SELECT * FROM categories WHERE status=1");
+                                        while ($cat_row = mysqlI_fetch_array($cat_result)) {
+                                            ?>
+                                            <li><a href="grid.php?cat=<?= $cat_row["name"] ?>"><?= $cat_row["name"] ?></a></li>
+                                        <?php } ?>
                                     </ol>
                                 </dd>
                             </dl>
                         </div>
-                        <?php //require_once './vt-slider.php'; ?>
+                        <?php //require_once './vt-slider.php';  ?>
                         <!--block-special-->										
                     </div>
                 </div>
@@ -88,17 +88,14 @@ if (isset($_GET['error'])) {
                     </div>
                     <div class="block-tag">
                         <label><?= $lang['Hot Tag'] ?></label>
-                        <a href="grid.php?collection=Sexy"><span> </span></a>
-                        <a href="grid.php?collection=Casual"><span> </span></a>
-                        <a href="grid.php?collection=Slim"><span> </span></a>
-                        <a href="grid.php?collection=Sleeveless"><span> </span></a>
-                        <a href="grid.php?collection=Lace"><span> </span></a>
-                        <a href="grid.php?collection=Chiffon"><span> </span></a>
-                        <a href="grid.php?collection=Black"><span> </span></a>
-                        <a href="grid.php?collection=Girl"><span> </span></a>
-                        <a href="grid.php?collection=Boy"><span> </span></a>
-
-<!--							<span class="open-item closetag">open</span>-->
+                        <?php
+                        $result = mysqli_query($conn, "SELECT * FROM collection WHERE status='1'");
+                        while ($row = mysqli_fetch_array($result)) {
+                            ?>
+                            <a href="grid.php?collection=<?= $row["name"] ?>"><span><?= $row["name"] ?></span></a>
+                            <?php
+                        }
+                        ?>
                     </div>
                     <div id="catalog-listing">
                         <div class="category-products">

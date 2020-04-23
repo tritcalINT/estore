@@ -8,36 +8,27 @@ include_once './include/database.php';
 
 <ul class="products-grid">
 
-<?php
-if ($collection != '') {
+    <?php
+    if ($collection != '') {
+        $data = $database->listCollections($collection);
+    } else if ($cat_id != '') {
+
+        $data = $database->listItemByCat($cat_id);
+    } else {
+
+        $data = $database->listAllItems(0, 0, '');
+    }
 
 
+    $i = 0;
 
-    $data = $database->listCollections($collection);
-} else if ($cat_id != '') {
+    $cnt = 1;
 
-    $data = $database->listItemByCat($cat_id);
-} else {
-
-    $data = $database->listAllItems(0, 0, '');
-}
-
-
-$i = 0;
-
-$cnt = 1;
-
-while ($row = $database->fetch_set($data)) {
-
-    $qtyid = 'qty' . $i;
-
-    $hqtyid = 'hqty' . $i;
-
-    $strdet = "detail.php?pitmky=" . base64_encode($row['product_id']) . "&pele=" . base64_decode($i);
-    ?>
-
-
-
+    while ($row = $database->fetch_set($data)) {
+        $qtyid = 'qty' . $i;
+        $hqtyid = 'hqty' . $i;
+        $strdet = "detail.php?pitmky=" . base64_encode($row['product_id']) . "&pele=" . base64_decode($i);
+        ?>
         <li class="col-lg-4 col-md-4 col-sm-4 col-xs-6 item">
             <div class="margin-bottom">
                 <br>
@@ -111,8 +102,8 @@ while ($row = $database->fetch_set($data)) {
         </li>
 
 
-    <?php
-}
-?>
+        <?php
+    }
+    ?>
 
 </ul>

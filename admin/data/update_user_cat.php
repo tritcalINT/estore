@@ -1,50 +1,31 @@
 <?php
-	include_once '../session.php';
-        include_once '../../conn.php';
-	include_once 'functions.php';
 
-	//Fetching Values from URL
-	$brand_id = $_POST['user_cat_id'];
-        $brand_name= $_POST['user_cat_name'];
-        $brand_logo = $_POST['upload_label'];
-        $brand_description = $_POST['user_cat_description'];
-        $brand_status = $_POST['status'];
-        $brand_cat = $_POST['brand_cat_id'];
-        $brand_rank=htmlentities($_POST['rank'], ENT_QUOTES, "UTF-8");
-        
-        
-    	
-	if($_SESSION['master'] != ''){
-		$updated_by = $_SESSION['master'];
-	} else if($_SESSION['supermaster'] != '') {
-		$updated_by = $_SESSION['supermaster'];
-	} else if($_SESSION['admin'] != '') {
-		$updated_by = $_SESSION['admin'];
-	}
-	
-	$update_by_id = getUseridbyUsername($updated_by, $conn);
-	
-	$target_dir = "../../uploads/brands/";
-    $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-    $uploadFileType = pathinfo($target_file,PATHINFO_EXTENSION);
-    if(basename($_FILES["fileToUpload"]["name"]) != ''){
-        $newfilename = round(microtime(true)) . '.' . $uploadFileType;
-        if($uploadFileType != "jpg" && $uploadFileType != "png" && $uploadFileType != "jpeg" && $uploadFileType != "gif" && $uploadFileType != "JPG" && $uploadFileType != "PNG" && $uploadFileType != "JPEG" && $uploadFileType != "GIF") {
-            $fail = "1";
-        } else {
-            $fail = "0"; 
-			move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_dir. $newfilename);
-			$sql_pic = ", ln_pic = '".$newfilename."'";
-        }
-		
+include_once '../session.php';
+include_once '../../conn.php';
+include_once 'functions.php';
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+//Fetching Values from URL
+$user_cat_name = $_POST['user_cat_name'];
+$user_cat_level = $_POST['user_cat_level'];
+$user_cat_ref_per = $_POST['user_cat_ref_per'];
+$user_cat_main = $_POST['user_cat_main'];
+$user_cat_status = $_POST['status'];
+$user_cat_id = $_POST["user_cat_id"];
+//---------------------------------------- 
+
+if ($user_cat_name != '') {
+
+    $sql_user_cat = "UPDATE user_cat SET cat_name='$user_cat_name',main_cat='$user_cat_main',ref_per=$user_cat_ref_per,cat_level=$user_cat_level,status='$user_cat_status' WHERE usr_cat_id = $user_cat_id ";
+
+    // echo $sql_user_cat;
+    // exit();
+    if(!mysqli_query($conn, $sql_user_cat)){
+        echo mysqli_error($conn);
     }
-	
-	if($brand_name != '' ){
-            $sql = "UPDATE brands SET name = '".$brand_name."', category = '".$brand_cat."', rank = '".$brand_rank."', logo = '".$newfilename."', des = '".$brand_status."' where  id = '".$brand_id."'";
-            mysqli_query($conn, $sql);
-            header('Location: ../brand_list.php');	
-	} else {
-		header('Location: ../brand_add.php?error=1&action=update&if='.$brand_id);
-	}
 
-?>
+
+    header('Location: ../user_cat_list.php');
+} else {
+    header('Location: ../user_cat_add.php?error=1');
+}

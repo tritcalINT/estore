@@ -890,7 +890,7 @@ function convert_number_to_words($number)
          
       
       
-      $sql = "SELECT* from product WHERE collection ='CORSSBODY'";
+      $sql = "SELECT* from product WHERE collection ='CORSSBODY' AND status=1";
     
       return $this->query($sql);
     }
@@ -899,7 +899,7 @@ function convert_number_to_words($number)
         function listItemByCat($cat_id) {
          
          
-      $sql = "SELECT* from product WHERE category_id ='$cat_id'";
+      $sql = "SELECT* from product WHERE category_id ='$cat_id' AND status=1";
          
       return $this->query($sql);
     }
